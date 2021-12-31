@@ -88,12 +88,12 @@ function draw() {
     spawnObstacles();
 
     kangaroo.collide(invisibleGround);
-    //write a condition for gamestate should end.
+    //escribe la condición para que gamestate finalice.
     if(){
       collidedSound.play();
       gameState = END;
     }
-    //write a condition when the score should increase
+    //escribe la condición para que score aumente
     if(){
       score = score + 1;
       shrubsGroup.destroyEach();
@@ -137,14 +137,14 @@ function draw() {
   textSize(20);
   stroke(3);
   fill("black")
-  text("Score: "+ score, camera.position.x,50);
+  text("Puntuación: "+ score, camera.position.x,50);
   
   if(score >= 5){
     kangaroo.visible = false;
     textSize(30);
     stroke(3);
     fill("black");
-    text("Congragulations!! You win the game!! ", 70,200);
+    text("¡Felicidades! ¡Ganaste el juego! ", 70,200);
     gameState = WIN;
   }
 }
@@ -198,8 +198,8 @@ function reset(){
   gameOver.visible = false;
   restart.visible = false;
   kangaroo.visible = true;
-  //change animation of the kangaroo
-  //destroy the shrubs and obstacle group
+  //cambia la animación del canguro
+  //destruye el grupo arbustos y obstáculos
   
   score = 0;
 }
